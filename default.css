@@ -2,13 +2,14 @@ Body
 {
 	background-color: #133756;
 	text-align:center;
-	font-size : 2.2em
+	transform: scale(2);
+	transform-origin: 50% 0%; 
+    	-moz-transform: scale(2); 
+    	-moz-transform-origin: 50% 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
-input {
-	font-size: 1em
 
-
-}
 p1 {
 	font-family: Impact, Charcoal, sans-serif;
 	color: #eeeeee;
