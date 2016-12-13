@@ -3,12 +3,13 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="default.css">
 		<title>
-			I am rusty
+			FOV Calculator
 		</title>
 	</head>
 	<body>
+		<div id="pwrap">
 		<script language="javascript">
-			function sum() {
+			function findmyfov() {
 			var _dist = parseInt(document.getElementById('dist').value);
 			
 			var _size = parseInt(document.getElementById('size').value);
@@ -23,18 +24,77 @@
 
 			var _width = _aspectw * (_size/_aspecthyp);
 
-			var result = _dist + _size;
-			if (!isNaN(result)) {
-				document.getElementById('text5').value = _height;
+			var _result = (2 * (Math.atan(0.5*(_width/_dist)))) * (180/Math.PI);
+			if (!isNaN(_result)) {
+				document.getElementById('horizfovangle').value = Math.round(_result).toString() + ' degrees';
+				document.getElementById('vertfovangle').value = Math.round((2 * (Math.atan(0.5*(_height/_dist)))) * (180/Math.PI)).toString() + ' degrees';
 			}
 		}
 		</script>
  		<h1>FOV Calculator</h1>
-		<input type="text" id="dist"  onkeyup="sum();" />
-		<input type="text" id="size"  onkeyup="sum();" />
-		<input type="text" id="aspectw"  value="16" onkeyup="sum();" />
-		<input type="text" id="aspecth" value="9" onkeyup="sum();" />
-		<input type="text" id="text5" />
+
+		<table class="center">
+			<th>
+				Distance To Display
+			</th>
+			<tr>
+				<td>
+				<input type="text" id="dist"  onkeyup="findmyfov();" />
+				</td>
+			</tr>
+		</table>
+
+		<table class="center">
+			<th>
+				Display Size
+			</th>
+			<tr>
+				<td>
+				<input type="text" id="size"  onkeyup="findmyfov();" />
+				</td>
+			</tr>
+		
+		</table>
+
+		<table class="center">
+			<th colspan="3">
+				Aspect Ratio
+			</th>
+			<tr>
+				<td>
+				<input type="text" id="aspectw" value="16" style="width: 61px;" onkeyup="findmyfov();" maxlength="2" />
+				</td>
+				<td>
+					<p1><b>:</b></p1>
+				<td>
+				<input type="text" id="aspecth" value="9" style="width: 61px;" onkeyup="findmyfov();" maxlength="2" />
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<table class="center">
+			<th>
+				Horizontal FOV
+			</th>
+			<tr>
+			<td>
+			<input type="text" readonly id="horizfovangle" />
+			</td>
+			</tr>
+		</table>
+		<table class="center">
+			<th>
+				Vertical FOV
+			</th>
+			<tr>
+			<td>
+			<input type="text" readonly id="vertfovangle" />
+			</td>
+			</tr>
+		</table>
+
+		
+	</div>
 	</body>
 
 </html>
