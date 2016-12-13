@@ -19,6 +19,3 @@
 				document.getElementById('vertfovangle').value = Math.round((2 * (Math.atan(0.5*(_height/_dist)))) * (180/Math.PI)).toString() + ' degrees';
 			}
 		}
-		$("html, body, #scrollable").css({
-			height: $(window).height()
-		});

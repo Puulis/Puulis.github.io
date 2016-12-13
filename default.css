@@ -59,7 +59,3 @@ a:hover {
 	font-family: Impact, Charcoal, sans-serif;
 	text-decoration:underline;
 }
-#scrollable {
-	height: 100%
-	overflow-y: scroll;
-}
