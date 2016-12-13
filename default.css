@@ -47,15 +47,12 @@ a:link {
 	
 	color: #dedeee;
 	font-family: Impact, Charcoal, sans-serif;
-	text-decoration:none;
 }
 a:visited {
 	color: #aaaabe;
 	font-family: Impact, Charcoal, sans-serif;
-	text-decoration:none;
 }
 a:hover {
 	color: #f5f5ff;
 	font-family: Impact, Charcoal, sans-serif;
-	text-decoration:underline;
 }
