@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="default.css">
+		<title>
+			I am rusty
+		</title>
+	</head>
+	<body>
+		<script language="javascript">
+			function sum() {
+			var _dist = parseInt(document.getElementById('dist').value);
+			
+			var _size = parseInt(document.getElementById('size').value);
+			
+			var _aspecth = parseInt(document.getElementById('aspecth').value);
+			
+			var _aspectw = parseInt(document.getElementById('aspectw').value);
+			
+			var _aspecthyp = Math.sqrt(_aspecth*_aspecth + _aspectw*_aspectw);
+			
+			var _height = _aspecth * (_size/_aspecthyp);
+
+			var _width = _aspectw * (_size/_aspecthyp);
+
+			var result = _dist + _size;
+			if (!isNaN(result)) {
+				document.getElementById('text5').value = _height;
+			}
+		}
+		</script>
+ 		<h1>FOV Calculator</h1>
+		<input type="text" id="dist"  onkeyup="sum();" />
+		<input type="text" id="size"  onkeyup="sum();" />
+		<input type="text" id="aspectw"  value="16" onkeyup="sum();" />
+		<input type="text" id="aspecth" value="9" onkeyup="sum();" />
+		<input type="text" id="text5" />
+	</body>
+
+</html>
