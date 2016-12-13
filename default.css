@@ -26,6 +26,16 @@ h1 {
 	color: #eeeeee;
 	text-align:center;
 }
+li {
+	color: #eeeeee;
+	margin-bottom: 2vh;
+}
+ul {
+	margin-left:7vw;
+	margin-right:7vw;
+
+
+}
 table.center {
 	margin-left:auto;
 	margin-right:auto;
