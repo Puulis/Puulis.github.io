@@ -3,13 +3,17 @@ Body
 	background-color: #133756;
 	text-align:center;
 	width: device-width;
-	font-size:4.2vh;
+	font-size:3.5vh;
 }
 input {
 	font-size:1.1em;
+	background-color:#1e304c;
+	border-color:#19273d;
+	color:#eeeeee;
+	text-align:center;
 }
 p1 {
-	font-family: Impact, Charcoal, sans-serif;
+	font-family: Charcoal, sans-serif;
 	color: #eeeeee;
 }
 
@@ -20,6 +24,7 @@ th {
 h1 {
 	font-family: Impact, Charcoal, sans-serif;
 	color: #eeeeee;
+	text-align:center;
 }
 table.center {
 	margin-left:auto;
@@ -27,4 +32,24 @@ table.center {
 }
 hr {
 	width: 80vw;
+}
+a:link {
+	
+	color: #dedeee;
+	font-family: Impact, Charcoal, sans-serif;
+	text-decoration:none;
+}
+a:visited {
+	color: #aaaabe;
+	font-family: Impact, Charcoal, sans-serif;
+	text-decoration:none;
+}
+a:hover {
+	color: #f5f5ff;
+	font-family: Impact, Charcoal, sans-serif;
+	text-decoration:underline;
+}
+a:active {
+	
+
 }

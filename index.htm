@@ -10,9 +10,9 @@
 		
 		<script language="javascript">
 			function findmyfov() {
-			var _dist = parseInt(document.getElementById('dist').value);
+			var _dist = parseFloat(document.getElementById('dist').value);
 			
-			var _size = parseInt(document.getElementById('size').value);
+			var _size = parseFloat(document.getElementById('size').value);
 			
 			var _aspecth = parseInt(document.getElementById('aspecth').value);
 			
@@ -33,7 +33,21 @@
 		</script>
 		<div id="pwrap">
  		<h1>FOV Calculator</h1>
-
+			<hr>
+			<table class="center">
+				<tr>
+					<td>
+						<a href="about.htm">About FOV </a>
+					</td>
+					<td>
+						<p1> | </p1>
+					</td>
+					<td>
+						<a href="howto.htm">How To Use Me </a>
+					</td>
+				</tr>
+			</table>
+			<hr>
 		<table class="center">
 			<th>
 				Distance To Display
@@ -63,12 +77,12 @@
 			</th>
 			<tr>
 				<td>
-				<input type="text" id="aspectw" value="16" style="width: 23.5vh;" onkeyup="findmyfov();" maxlength="2" />
+				<input type="text" style="text-align:right; width: 19vh;" id="aspectw" value="16" onkeyup="findmyfov();" />
 				</td>
 				<td>
 					<p1><b>:</b></p1>
 				<td>
-				<input type="text" id="aspecth" value="9" style="width: 23.5vh;" onkeyup="findmyfov();" maxlength="2" />
+				<input type="text" style="text-align:left; width: 19vh;" id="aspecth" value="9" onkeyup="findmyfov();" />
 				</td>
 			</tr>
 		</table>
@@ -93,6 +107,7 @@
 			</td>
 			</tr>
 		</table>
+
 
 		
 	</div>
